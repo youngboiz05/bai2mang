@@ -1,0 +1,32 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+void nhap(int a[],int& n)
+{
+		
+		
+			cout << "\n Moi nhap vao so nguyen n(n<100): ";
+			cin >> n;
+			if (n <= 0 || n >= 100)
+			{
+				cout << "\n so phan tu khong hop le: ";
+			}
+	return;
+	
+}
+void xuat(int a[],int n)
+{
+	cout << "\n ca phan tu cua mang la: ";
+	for (int i = 0; i < n; i++)
+	{
+		xuat(a[i]);
+
+	}return 0;
+}
+int main()
+{
+	int n; int mang[100];
+	nhap(mang,n);
+	xuat(mang,n);
+	return 0;
+}
